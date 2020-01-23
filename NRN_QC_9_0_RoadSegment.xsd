@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:nrn="http://www.geobase.ca/nrn" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.geobase.ca/nrn" elementFormDefault="qualified">
+<import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/2.1.2/feature.xsd"/>
+<element name="FeatureCollection" type="nrn:FeatureCollectionType" substitutionGroup="gml:_FeatureCollection"/>
+<element name="RoadSegment" type="nrn:RoadSegmentType" substitutionGroup="gml:_Feature"/>
+
+<complexType name="FeatureCollectionType">
+<complexContent>
+<extension base="gml:AbstractFeatureCollectionType">
+</extension>
+</complexContent>
+</complexType>
+
+<complexType name="RoadSegmentType">
+<complexContent>
+<extension base="gml:AbstractFeatureType">
+<sequence>
+<element name="nid">
+<simpleType>
+<restriction base="string">
+<maxLength value="32"/>
+</restriction>
+</simpleType></element>
+<element name="roadSegmentId" type="int"/>
+<element name="addressRangeNid">
+<simpleType>
+<restriction base="string">
+<maxLength value="32"/>
+</restriction>
+</simpleType></element>
+<element name="datasetName">
+<simpleType>
+<restriction base="string">
+<maxLength value="25"/>
+</restriction>
+</simpleType></element>
+<element name="standardVersion">
+<simpleType>
+<restriction base="string">
+<maxLength value="100"/>
+</restriction>
+</simpleType></element>
+<element name="planimetricAccuracy" type="short"/>
+<element name="acquisitionTechnique">
+<simpleType>
+<restriction base="string">
+<maxLength value="23"/>
+</restriction>
+</simpleType></element>
+<element name="provider">
+<simpleType>
+<restriction base="string">
+<maxLength value="24"/>
+</restriction>
+</simpleType></element>
+<element name="creationDate">
+<simpleType>
+<restriction base="string">
+<maxLength value="8"/>
+</restriction>
+</simpleType></element>
+<element name="revisionDate">
+<simpleType>
+<restriction base="string">
+<maxLength value="8"/>
+</restriction>
+</simpleType></element>
+<element name="metadataCoverage">
+<simpleType>
+<restriction base="string">
+<maxLength value="8"/>
+</restriction>
+</simpleType></element>
+<element name="functionalRoadClass">
+<simpleType>
+<restriction base="string">
+<maxLength value="21"/>
+</restriction>
+</simpleType></element>
+<element name="routeNumber1">
+<simpleType>
+<restriction base="string">
+<maxLength value="10"/>
+</restriction>
+</simpleType></element>
+<element name="routeNumber2">
+<simpleType>
+<restriction base="string">
+<maxLength value="10"/>
+</restriction>
+</simpleType></element>
+<element name="routeNumber3">
+<simpleType>
+<restriction base="string">
+<maxLength value="10"/>
+</restriction>
+</simpleType></element>
+<element name="routeNumber4">
+<simpleType>
+<restriction base="string">
+<maxLength value="10"/>
+</restriction>
+</simpleType></element>
+<element name="routeNumber5">
+<simpleType>
+<restriction base="string">
+<maxLength value="10"/>
+</restriction>
+</simpleType></element>
+<element name="routeNameFrench1">
+<simpleType>
+<restriction base="string">
+<maxLength value="100"/>
+</restriction>
+</simpleType></element>
+<element name="routeNameFrench2">
+<simpleType>
+<restriction base="string">
+<maxLength value="100"/>
+</restriction>
+</simpleType></element>
+<element name="routeNameFrench3">
+<simpleType>
+<restriction base="string">
+<maxLength value="100"/>
+</restriction>
+</simpleType></element>
+<element name="routeNameFrench4">
+<simpleType>
+<restriction base="string">
+<maxLength value="100"/>
+</restriction>
+</simpleType></element>
+<element name="routeNameEnglish1">
+<simpleType>
+<restriction base="string">
+<maxLength value="100"/>
+</restriction>
+</simpleType></element>
+<element name="routeNameEnglish2">
+<simpleType>
+<restriction base="string">
+<maxLength value="100"/>
+</restriction>
+</simpleType></element>
+<element name="routeNameEnglish3">
+<simpleType>
+<restriction base="string">
+<maxLength value="100"/>
+</restriction>
+</simpleType></element>
+<element name="routeNameEnglish4">
+<simpleType>
+<restriction base="string">
+<maxLength value="100"/>
+</restriction>
+</simpleType></element>
+<element name="exitNumber">
+<simpleType>
+<restriction base="string">
+<maxLength value="10"/>
+</restriction>
+</simpleType></element>
+<element name="numberOfLanes" type="short"/>
+<element name="pavementStatus">
+<simpleType>
+<restriction base="string">
+<maxLength value="7"/>
+</restriction>
+</simpleType></element>
+<element name="pavedRoadSurfaceType">
+<simpleType>
+<restriction base="string">
+<maxLength value="8"/>
+</restriction>
+</simpleType></element>
+<element name="unpavedRoadSurfaceType">
+<simpleType>
+<restriction base="string">
+<maxLength value="7"/>
+</restriction>
+</simpleType></element>
+<element name="structureId">
+<simpleType>
+<restriction base="string">
+<maxLength value="32"/>
+</restriction>
+</simpleType></element>
+<element name="structureType">
+<simpleType>
+<restriction base="string">
+<maxLength value="15"/>
+</restriction>
+</simpleType></element>
+<element name="structureNameFrench">
+<simpleType>
+<restriction base="string">
+<maxLength value="100"/>
+</restriction>
+</simpleType></element>
+<element name="structureNameEnglish">
+<simpleType>
+<restriction base="string">
+<maxLength value="100"/>
+</restriction>
+</simpleType></element>
+<element name="left_AddressDirectionFlag">
+<simpleType>
+<restriction base="string">
+<maxLength value="18"/>
+</restriction>
+</simpleType></element>
+<element name="left_FirstHouseNumber" type="int"/>
+<element name="left_LastHouseNumber" type="int"/>
+<element name="left_OfficialStreetNameConcat">
+<simpleType>
+<restriction base="string">
+<maxLength value="100"/>
+</restriction>
+</simpleType></element>
+<element name="left_OfficialPlaceName">
+<simpleType>
+<restriction base="string">
+<maxLength value="100"/>
+</restriction>
+</simpleType></element>
+<element name="right_AddressDirectionFlag">
+<simpleType>
+<restriction base="string">
+<maxLength value="18"/>
+</restriction>
+</simpleType></element>
+<element name="right_FirstHouseNumber" type="int"/>
+<element name="right_LastHouseNumber" type="int"/>
+<element name="right_OfficialStreetNameConcat">
+<simpleType>
+<restriction base="string">
+<maxLength value="100"/>
+</restriction>
+</simpleType></element>
+<element name="right_OfficialPlaceName">
+<simpleType>
+<restriction base="string">
+<maxLength value="100"/>
+</restriction>
+</simpleType></element>
+<element name="closingPeriod">
+<simpleType>
+<restriction base="string">
+<maxLength value="7"/>
+</restriction>
+</simpleType></element>
+<element name="roadJurisdiction">
+<simpleType>
+<restriction base="string">
+<maxLength value="100"/>
+</restriction>
+</simpleType></element>
+<element name="speedRestrictions" type="short"/>
+<element name="trafficDirection">
+<simpleType>
+<restriction base="string">
+<maxLength value="18"/>
+</restriction>
+</simpleType></element>
+<choice>
+<element ref="gml:lineStringProperty"/>
+<element ref="gml:multiLineStringProperty"/>
+</choice>
+</sequence>
+</extension>
+</complexContent>
+</complexType>
+</schema>

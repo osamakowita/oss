@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:gml2="http://www.safe.com/gml2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.safe.com/gml2" elementFormDefault="qualified">
+<import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/2.1.2/feature.xsd"/>
+<element name="FeatureCollection" type="gml2:FeatureCollectionType" substitutionGroup="gml:_FeatureCollection"/>
+<element name="AddressRange" type="gml2:AddressRangeType" substitutionGroup="gml:_Feature"/>
+
+<complexType name="FeatureCollectionType">
+<complexContent>
+<extension base="gml:AbstractFeatureCollectionType">
+</extension>
+</complexContent>
+</complexType>
+
+<complexType name="AddressRangeType">
+<complexContent>
+<extension base="gml:AbstractFeatureType">
+<sequence>
+<element name="nid">
+<simpleType>
+<restriction base="string">
+<maxLength value="32"/>
+</restriction>
+</simpleType></element>
+<element name="datasetName">
+<simpleType>
+<restriction base="string">
+<maxLength value="25"/>
+</restriction>
+</simpleType></element>
+<element name="standardVersion">
+<simpleType>
+<restriction base="string">
+<maxLength value="100"/>
+</restriction>
+</simpleType></element>
+<element name="planimetricAccuracy" type="short"/>
+<element name="acquisitionTechnique">
+<simpleType>
+<restriction base="string">
+<maxLength value="23"/>
+</restriction>
+</simpleType></element>
+<element name="provider">
+<simpleType>
+<restriction base="string">
+<maxLength value="24"/>
+</restriction>
+</simpleType></element>
+<element name="creationDate">
+<simpleType>
+<restriction base="string">
+<maxLength value="8"/>
+</restriction>
+</simpleType></element>
+<element name="revisionDate">
+<simpleType>
+<restriction base="string">
+<maxLength value="8"/>
+</restriction>
+</simpleType></element>
+<element name="metadataCoverage">
+<simpleType>
+<restriction base="string">
+<maxLength value="8"/>
+</restriction>
+</simpleType></element>
+<element name="left_DigitizingDirectionFlag">
+<simpleType>
+<restriction base="string">
+<maxLength value="18"/>
+</restriction>
+</simpleType></element>
+<element name="left_HouseNumberStructure">
+<simpleType>
+<restriction base="string">
+<maxLength value="9"/>
+</restriction>
+</simpleType></element>
+<element name="left_ReferenceSystemIndicator">
+<simpleType>
+<restriction base="string">
+<maxLength value="18"/>
+</restriction>
+</simpleType></element>
+<element name="left_FirstHouseNumberType">
+<simpleType>
+<restriction base="string">
+<maxLength value="16"/>
+</restriction>
+</simpleType></element>
+<element name="left_FirstHouseNumber" type="int"/>
+<element name="left_FirstHouseNumberSuffix">
+<simpleType>
+<restriction base="string">
+<maxLength value="20"/>
+</restriction>
+</simpleType></element>
+<element name="left_LastHouseNumberType">
+<simpleType>
+<restriction base="string">
+<maxLength value="16"/>
+</restriction>
+</simpleType></element>
+<element name="left_LastHouseNumber" type="int"/>
+<element name="left_LastHouseNumberSuffix">
+<simpleType>
+<restriction base="string">
+<maxLength value="20"/>
+</restriction>
+</simpleType></element>
+<element name="left_OfficialStreetNameNid">
+<simpleType>
+<restriction base="string">
+<maxLength value="32"/>
+</restriction>
+</simpleType></element>
+<element name="left_AlternateStreetNameNid">
+<simpleType>
+<restriction base="string">
+<maxLength value="32"/>
+</restriction>
+</simpleType></element>
+<element name="right_DigitizingDirectionFlag">
+<simpleType>
+<restriction base="string">
+<maxLength value="18"/>
+</restriction>
+</simpleType></element>
+<element name="right_HouseNumberStructure">
+<simpleType>
+<restriction base="string">
+<maxLength value="9"/>
+</restriction>
+</simpleType></element>
+<element name="right_ReferenceSystemIndicator">
+<simpleType>
+<restriction base="string">
+<maxLength value="18"/>
+</restriction>
+</simpleType></element>
+<element name="right_FirstHouseNumberType">
+<simpleType>
+<restriction base="string">
+<maxLength value="16"/>
+</restriction>
+</simpleType></element>
+<element name="right_FirstHouseNumber" type="int"/>
+<element name="right_FirstHouseNumberSuffix">
+<simpleType>
+<restriction base="string">
+<maxLength value="20"/>
+</restriction>
+</simpleType></element>
+<element name="right_LastHouseNumberType">
+<simpleType>
+<restriction base="string">
+<maxLength value="16"/>
+</restriction>
+</simpleType></element>
+<element name="right_LastHouseNumber" type="int"/>
+<element name="right_LastHouseNumberSuffix">
+<simpleType>
+<restriction base="string">
+<maxLength value="20"/>
+</restriction>
+</simpleType></element>
+<element name="right_OfficialStreetNameNid">
+<simpleType>
+<restriction base="string">
+<maxLength value="32"/>
+</restriction>
+</simpleType></element>
+<element name="right_AlternateStreetNameNid">
+<simpleType>
+<restriction base="string">
+<maxLength value="32"/>
+</restriction>
+</simpleType></element>
+<choice>
+<element ref="gml:pointProperty"/>
+<element ref="gml:multiPointProperty"/>
+</choice>
+</sequence>
+</extension>
+</complexContent>
+</complexType>
+</schema>

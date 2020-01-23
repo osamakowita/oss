@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:nrn="http://www.geobase.ca/nrn" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.geobase.ca/nrn" elementFormDefault="qualified">
+<import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/2.1.2/feature.xsd"/>
+<element name="FeatureCollection" type="nrn:FeatureCollectionType" substitutionGroup="gml:_FeatureCollection"/>
+<element name="Junction" type="nrn:JunctionType" substitutionGroup="gml:_Feature"/>
+
+<complexType name="FeatureCollectionType">
+<complexContent>
+<extension base="gml:AbstractFeatureCollectionType">
+</extension>
+</complexContent>
+</complexType>
+
+<complexType name="JunctionType">
+<complexContent>
+<extension base="gml:AbstractFeatureType">
+<sequence>
+<element name="nid">
+<simpleType>
+<restriction base="string">
+<maxLength value="32"/>
+</restriction>
+</simpleType></element>
+<element name="datasetName">
+<simpleType>
+<restriction base="string">
+<maxLength value="25"/>
+</restriction>
+</simpleType></element>
+<element name="standardVersion">
+<simpleType>
+<restriction base="string">
+<maxLength value="100"/>
+</restriction>
+</simpleType></element>
+<element name="planimetricAccuracy" type="short"/>
+<element name="acquisitionTechnique">
+<simpleType>
+<restriction base="string">
+<maxLength value="23"/>
+</restriction>
+</simpleType></element>
+<element name="provider">
+<simpleType>
+<restriction base="string">
+<maxLength value="24"/>
+</restriction>
+</simpleType></element>
+<element name="creationDate">
+<simpleType>
+<restriction base="string">
+<maxLength value="8"/>
+</restriction>
+</simpleType></element>
+<element name="revisionDate">
+<simpleType>
+<restriction base="string">
+<maxLength value="8"/>
+</restriction>
+</simpleType></element>
+<element name="metadataCoverage">
+<simpleType>
+<restriction base="string">
+<maxLength value="8"/>
+</restriction>
+</simpleType></element>
+<element name="exitNumber">
+<simpleType>
+<restriction base="string">
+<maxLength value="10"/>
+</restriction>
+</simpleType></element>
+<element name="junctionType">
+<simpleType>
+<restriction base="string">
+<maxLength value="12"/>
+</restriction>
+</simpleType></element>
+<choice>
+<element ref="gml:pointProperty"/>
+<element ref="gml:multiPointProperty"/>
+</choice>
+</sequence>
+</extension>
+</complexContent>
+</complexType>
+</schema>
